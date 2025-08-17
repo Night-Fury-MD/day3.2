@@ -195,9 +195,9 @@ function buildProductCatalog(rawItems) {
     for (let i = 0; i < rawItems.length; i++) {
         let item = rawItems[i];
         let p = Object.create(productProto);
-        p.name = item.name || "Unknown";
-        p.brand = item.brand || "";
-        p.stock = item.stock || 0;
+        p.name = item.name;
+        p.brand = item.brand;
+        p.stock = item.stock;
         c.push(p);
     }
     return c;
@@ -331,3 +331,4 @@ console.log(safeLogin(user ={ email: "a@b.com", password: "He11oWorld" } , polic
 // ============================================================
 // End — Have fun!
 // ============================================================
+
